@@ -41,4 +41,50 @@ body {
   button:hover {
     background-color: #0056b3;
   }
+
+
+
+
+
+
+
+
+   .spin{
+    width: 30px;
+    height: 30px;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    margin: 0 auto;
+    border-bottom: 5px solid #007bff;
+    animation: spin 1s linear infinite;
+   }
+
+.hidden{
+    display: none;
+
+}
+
+
+
+   @keyframes spin {
+ 0%{
+    transform: rotate(0deg);
+ }
+ 100% {
+    transform: rotate(360deg);
+ }
+}
+
+
+
+#joke-history {
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
   
+  #joke-history li {
+    margin-bottom: 10px;
+    color: #555;
+  }
