@@ -1,5 +1,6 @@
 async function getJoke() {
     const jokePara = document.getElementById("joke");
+    jokePara.textContent = "Loading... 🤔";
   
     try {
       const response = await fetch("https://icanhazdadjoke.com/", {
@@ -10,10 +11,9 @@ async function getJoke() {
   
       const data = await response.json();
       jokePara.textContent = data.joke;
-      
     } catch (error) {
-      jokePara.textContent = "Oops! Something went wrong.";
-      console.error("Error fetching joke:", error);
+      jokePara.textContent = "Oops! Couldn't fetch a joke 😓";
+      console.error("Error:", error);
     }
   }
   
